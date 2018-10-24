@@ -1,0 +1,42 @@
+<Teks@Label>:
+	color: (.2, .2, .2, 1)
+	markup: True
+	font_name: 'Roboto'
+
+<SubmitButton@Button>:
+	background_color: (.9, .9, 2, 1)
+	size_hint_y: None
+	text: '|>'
+	font_size: 30
+
+FloatLayout:
+	ScrollView:
+		BoxLayout:
+			orientation: 'vertical'
+			size_hint_y: None
+			height: 1200
+			Teks:
+				size_hint_y: None
+				text: '[b]Hitung Data Tunggal Statisitika[/b] \n\nMasukan Semua Data\n[color=ff5555]Data Dipisahkan Dengan ,[/color]'
+				halign: 'center'
+			BoxLayout:
+				size_hint_y: None
+				TextInput:
+					id: input_distribusi
+					hint_text: '21, 44, 22, 41, ....'
+					size_hint_y: None
+				SubmitButton:
+					size_hint: (None, None)
+					id: submit_distribusi
+			Teks:
+				text: '[b]=========[ HASIL ]=========[/b]'
+				color: (.2, .3, .8, 1)
+			BoxLayout:
+				padding: 0	
+				Teks:
+					text: 'Jangkauan : \n\nJumlah Kelas : \n\nInterval : \n\nInterval bulatkan :\n\nMean : \n\nMedian : \n\nModus : \n\nQ1 : \n\nQ2 : \n\nQ3 : \n\nQR :'
+					halign: 'right'
+				Teks:
+					size_hint_x: None
+					width: 200
+					id: hasil_data_distribusi
